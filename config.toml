@@ -1,6 +1,6 @@
 baseURL = "https://docs.configset.com/"
 title = "CFS Documentation"
-theme = "docuapi"
+theme = "slate"
 defaultContentLanguage = "en"
 enableEmoji = true
 
