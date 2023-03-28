@@ -1,3 +1,15 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://docs.configset.com/"
+title = "CFS Documentation"
+theme = "docuapi"
+defaultContentLanguage = "en"
+enableEmoji = true
+
+[params]
+  editURL = "https://github.com/configset/cfs-docs/edit/main/content/"
+
+[[menu.main]]
+  identifier = "docs"
+  name = "Docs"
+  title = "Documentation"
+  url = "/docs/"
+  weight = 10
