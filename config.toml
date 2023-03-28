@@ -1,6 +1,7 @@
 baseURL = "https://docs.configset.com/"
 title = "CFS Documentation"
-theme = "docuapi"
+themesDir = "themes"
+theme = "hugo-theme-learn"
 defaultContentLanguage = "en"
 enableEmoji = true
 
