@@ -1,6 +1,6 @@
 ---
 title: "Github Operator"
-weight: 5
+weight: 12
 ---
 # WIP - Not complete
 

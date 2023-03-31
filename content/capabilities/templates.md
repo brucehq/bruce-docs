@@ -1,6 +1,6 @@
 ---
 title: "Templates"
-weight: 2
+weight: 1
 ---
 The template files use Golang's text/template package, which provides a rich set of functions and actions to perform various operations on the data. In addition to the built-in functions, ConfigSet provides a custom |dump function to pretty-print the variable contents. Here's an overview of some common template functions and actions:
 

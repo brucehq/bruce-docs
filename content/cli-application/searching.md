@@ -14,3 +14,5 @@ cfs search <SEARCH_TERM>
 ```bash
 cfs search nginx
 ```
+
+In the above example, cfs will search the ConfigSet (https://configset.com/#manifests) repository for any manifests that contain the word nginx in the title or description.
