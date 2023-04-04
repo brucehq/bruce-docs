@@ -12,7 +12,7 @@ The Recursive Copy operator is used similarly to the copy operator but is intend
   ignoreFiles: <IGNORED_FILES>
   flatCopy: <IGNORED_FILES>
   maxDepth: <IGNORED_FILES>
-	maxConcurrent: <MAX_CONCURRENT>
+  maxConcurrent: <MAX_CONCURRENT>
 ```
 
 * `copy`: The source directory/file to be copied.  Must currently be an http / https url.
