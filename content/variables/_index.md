@@ -8,7 +8,7 @@ Variables within configset are effectively environment variables that are read f
 Variables are loaded in a very specific order in order to ensure that you can override the values with maximum flexibility.  The order of precedence is as follows:
 1. Pre set environment variables
 2. Variables in manifest being executed
-3. Properties file specified from `-p` or `--property-file`` flag
+3. Properties file specified from `-p` or `--property-file` flag
 4. Operators like cmd calling the setEnv capability
 
 ## Pre set environment variables
@@ -30,7 +30,7 @@ steps:
 ```
 This is the most common way to establish variables for the operators to make use of.  The service owner, and remote days as well as the vhost document root are set and can now be used by the operators and templates.  Operators use standard shell notation eg. `$ServiceOwner` or `${ServiceOwner}` to reference the variable.  Templates use the golang text/template notation eg. `{{.ServiceOwner}}` to reference the variable.
 
-## Properties file specified from `-p` or `--property-file`` flag
+## Properties file specified from `-p` or `--property-file` flag
 The properties file is a file that contains a list of key value pairs that are loaded into the environment prior to execution.  This allows you to pre-set a set of variables that can be used by the operators and templates.  This is a great way to set up a set of variables that can be used across multiple executions.  For example you can set up a properties file that contains the following:
 ```yaml
 ServiceOwner=www-data
