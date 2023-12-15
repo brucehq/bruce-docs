@@ -57,20 +57,22 @@ In the above referenced structure you can see that we first define a set of vari
 
 cfs provides a wide range of operators that cater to various use cases. Some of the most common operators include:
 
-- Tarball: Download and extract a tarball to a specified directory.
 - Command: Execute a command on the system.
 - Copy: Make a copy of a file or directory.
 - Cron: Set up a cron task.
 - Git: Checks out a git repository, without the need to have git installed on the system.
 - PackageRepo: Set up a package repository, such as apt or yum.
 - Packages: Install a package based on the system type.
+- RecursiveCopy: Copy a remote https / s3 directory to a local directory. (Great for ML projects and fully concurrent)
 - Services: Set up a service to start and ensure the application runs with the service.
 - Signals: Send a signal to a specific process.
+- Tarball: Download and extract a tarball to a specified directory.
 - Templates: Load a template and write it to the local filesystem.
 
 Future operators will include:
 GithubRelease: Ability to download a particular github release (or latest) and extract it to a specified directory.
-RecursiveCopy: Ability to recursively copy targets (http/https, s3, localhost, etc.) to a local directoy.  Useful for copying a directory from a remote server to a local server, this was requested for copying weights for ML models, from remote servers to local servers.
+RemoteInstall: Ability to install CFS on a remote server directly. (SSH Based)
+RemoteExec: Ability to execute a command on a remote server. (SSH Based)
 Vault: Ability to interact with HashiCorp Vault and retrieve a value, quickly set / use it as a command for bootstrapping purposes.
 
 Each operator has its own set of properties and behavior, which will be discussed in detail in the following sections.
