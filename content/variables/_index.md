@@ -55,3 +55,9 @@ The command operator provides a means to take the current output of the command 
 - cmd: ip addr show $(ip route | awk '/default/ {print $5}') | awk '/inet / {print $2}' | awk -F/ '{print $1}'
   setEnv: Domain
 ```
+### Secrets for your templates
+You can also use the command operator to retrieve a secret from a secret store like HashiCorp Vault and then use it in a template.  This allows you to retrieve a secret and then use it in a template without having to worry about the secret being exposed in the manifest file.  For example you can use the following command to retrieve a secret from HashiCorp Vault and then use it in a template to set the password for a database user.
+```yaml
+- cmd: vault kv get -field=password secret/database
+  setEnv: DB_PASSWORD
+```
