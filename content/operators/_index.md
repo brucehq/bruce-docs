@@ -1,6 +1,6 @@
 ---
 title: "The operators"
-weight: 2
+weight: 3
 ---
 
 Manifest files are the core building blocks of cfs. They are used to describe the desired state of your infrastructure and define the actions, components, and configurations required for a specific task. Manifest files are written in a simple, easy-to-understand language that is both human-readable and machine-parseable.  Each manifest file will contain one or many operators and their associated variables to drive the operators to accomplish your task.

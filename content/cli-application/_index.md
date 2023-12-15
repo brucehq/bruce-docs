@@ -1,6 +1,6 @@
 ---
 title: "Client Application Usage"
-weight: 1
+weight: 2
 ---
 ## Overall Usage
 To get started with the cfs client application, download the appropriate binary for your platform from the official releases page. Once downloaded, extract the archive.
