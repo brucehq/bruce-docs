@@ -8,7 +8,7 @@ The Templates operator is used to create and manage template files on the system
 
 ```yaml
 template: <TEMPLATE_PATH>
-remoteLocation: <REMOTE_LOCATION>
+source: <REMOTE_LOCATION>
 perms: <PERMISSIONS>
 owner: <OWNER>
 group: <GROUP>
@@ -20,7 +20,7 @@ osLimits: <OS_LIMITS>
 ```
 
 * `template`: The local path where the template file will be saved.
-* `remoteLocation`: The URL or path to the template file's source location.
+* `source`: The URL or path to the template file's source location.
 * `perms`: The file permissions to set (e.g., 0664).
 * `owner`: The owner of the file.
 * `group`: The group owner of the file.
@@ -34,7 +34,7 @@ osLimits: <OS_LIMITS>
 
 ```yaml
 template: /etc/nginx/nginx.conf
-remoteLocation: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
+source: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
 perms: 0664
 owner: root
 group: root
