@@ -70,6 +70,7 @@ cfs provides a wide range of operators that cater to various use cases. Some of 
 - Templates: Load a template and write it to the local filesystem.
 
 Future operators will include:
+API: Allowing you to call a rest API and use the results in a template or other operator, or save the result to a file.
 GithubRelease: Ability to download a particular github release (or latest) and extract it to a specified directory.
 RemoteInstall: Ability to install CFS on a remote server directly. (SSH Based)
 RemoteExec: Ability to execute a command on a remote server. (SSH Based)
