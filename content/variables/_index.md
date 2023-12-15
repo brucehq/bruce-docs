@@ -1,6 +1,6 @@
 ---
 title: "Variables & Properties"
-weight: 4
+weight: 3
 ---
 Variables within configset are effectively environment variables that are read from the current environment but also set in the current running process to ensure that they are available to all operators.  Variables can be set in a number of ways, including: The variables section in the main manifest.  Setting them in the environment prior to running the cfs command.  Setting them in the environment properties file.  Setting them in the command line.  Finally you can also use the set env capabilities of the operators like command to set a value for use.
 
