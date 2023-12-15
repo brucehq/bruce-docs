@@ -37,6 +37,8 @@ ServiceOwner=www-data
 RotateDays=7
 VHOST_ROOT=/opt/vhosts/hello-world
 ``` 
+
+### Properties file for different environments
 Second to this a standard pattern is to create different properties files for different environments.  For example you can create a properties file for your dev environment, one for your staging environment and one for your production environment.  This allows you to have a single manifest file that can be used across all environments but the properties file will be different for each environment.  For example you can have a properties file for your dev environment that contains the following:
 ```yaml
 AppEnv=dev
