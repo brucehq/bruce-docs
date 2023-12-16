@@ -30,7 +30,7 @@ steps:
 
 # Create a virtual host via a template
 - template: /etc/nginx/sites-available/hello-world
-  remoteLocation: https://configset.com/api/templates/7cc81042-b638-5260-bd09-2e6066fbfc46/data
+  source: https://configset.com/api/templates/7cc81042-b638-5260-bd09-2e6066fbfc46/data
 
 # Create a symlink for the virtual host
 - cmd: ln -sf /etc/nginx/sites-available/hello-world /etc/nginx/sites-enabled/hello-world
@@ -40,7 +40,7 @@ steps:
   dest: VHOST_ROOT
 
 - template: /etc/logrotate.d/nginx
-  remoteLocation: https://configset.com/api/templates/9095d69e-e419-57bc-b888-08e8a60fc11a/data
+  source: https://configset.com/api/templates/9095d69e-e419-57bc-b888-08e8a60fc11a/data
 
 # Enable and start the Nginx service
 - service: nginx
