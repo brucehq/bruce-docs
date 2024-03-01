@@ -17,6 +17,8 @@ vars:
     input: <INPUT>
     variable: <VARIABLE>
 osLimits: <OS_LIMITS>
+onlyIf: <sub-command> (Requires version 1.2.6 or higher)
+notIf: <sub-command> (Requires version 1.2.6 or higher)
 ```
 
 * `template`: The local path where the template file will be saved.
@@ -29,6 +31,8 @@ osLimits: <OS_LIMITS>
 * `input`: The input value or expression to evaluate.
 * `variable`: The variable name to use in the template.
 * `osLimits`: A list of operating systems that the operator should run on.
+* `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
+* `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
 
 ## Example:
 
@@ -46,3 +50,39 @@ osLimits: all
 ```
 
 In this example, the Templates operator downloads the Nginx configuration file from the provided URL and saves it to /etc/nginx/nginx.conf with the specified permissions, owner, and group. It also injects the variable NGINX_USER with the value nginx or www-data, depending on the operating system.
+
+## Example 2:
+
+```yaml
+template: /etc/nginx/nginx.conf
+source: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
+perms: 0664
+owner: root
+group: root
+vars:
+  - type: value
+    input: nginx|apt=www-data
+    variable: NGINX_USER
+osLimits: all
+notIf: ls /etc/systemd/system/nginx.service
+```
+
+In the above example, the Templates operator only executes if the /etc/systemd/system/nginx.service file does not exist.
+
+## Example 3:
+
+```yaml
+template: /etc/nginx/nginx.conf
+source: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
+perms: 0664
+owner: root
+group: root
+vars:
+  - type: value
+    input: nginx|apt=www-data
+    variable: NGINX_USER
+osLimits: all
+onlyIf: ls /tmp/output.txt
+```
+
+In the above example, the Templates operator only executes if the /tmp/output.txt file exists.

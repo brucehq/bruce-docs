@@ -13,6 +13,8 @@ The Recursive Copy operator is used similarly to the copy operator but is intend
   flatCopy: <IGNORED_FILES>
   maxDepth: <IGNORED_FILES>
   maxConcurrent: <MAX_CONCURRENT>
+  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
+  notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
 * `copy`: The source directory/file to be copied.  Must currently be an http / https url.
@@ -21,6 +23,8 @@ The Recursive Copy operator is used similarly to the copy operator but is intend
 * `flatCopy`: This is a boolean value that determines if the files should be copied to the destination directory or if the directory structure should be preserved.
 * `maxDepth`: This is an integer value that determines the maximum depth of the directory structure that should be copied. If set to 0 or left unset it will copy the entire directory structure.
 * `maxConcurrent`: This is an integer value that determines the maximum number of concurrent file copies that should be performed.  If set to 0 or left unset it will use the default value of 5.
+* `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
+* `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
 
 Please do be careful with setting the maxConcurrency value too high as you may run into issues with the remote server throttling your requests.
 
@@ -50,3 +54,33 @@ steps:
 ```
 
 In this example, the Copy operator will read and S3 bucket (somebucket) and copy all of the files to the local directory `/tmp/test/`.  The files will be copied to the destination directory and preserve the directory structure.  The index.html file will not be copied.  And it will only copy up to the third level of the directory structure (maxDepth = 2).
+
+## Example 3:
+```yaml
+steps:
+- copyRecursive: s3://somebucket/
+  dest: /tmp/test/
+  ignoreFiles:
+  - index.html
+  flatCopy: false
+  maxDepth: 0
+  maxConcurrent: 10
+  onlyIf: /usr/bin/ls /tmp/test/
+```
+
+In this example the recursive copy operator will only execute the copy command if the /tmp/test/ exists.
+
+## Example 4:
+```yaml
+steps:
+- copyRecursive: s3://somebucket/
+  dest: /tmp/test/
+  ignoreFiles:
+  - index.html
+  flatCopy: false
+  maxDepth: 0
+  maxConcurrent: 10
+  notIf: /usr/bin/ls /tmp/test/
+```
+
+In this example the recursive copy operator will only execute the copy command if the /tmp/test/ does not exist.
