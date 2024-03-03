@@ -1,6 +1,6 @@
 ---
 title: "PackageRepo Operator"
-weight: 6
+weight: 7
 ---
 The PackageRepo operator is used to set up a package repository for supported package managers such as `apt`, `dnf`, or `yum`.
 

@@ -1,6 +1,6 @@
 ---
 title: "Packages Operator"
-weight: 7
+weight: 8
 ---
 The Packages operator is used to install packages on the system using the supported package manager based on the operating system type.
 

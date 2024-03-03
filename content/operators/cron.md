@@ -1,6 +1,6 @@
 ---
 title: "Cron Operator"
-weight: 4
+weight: 3
 ---
 The Cron operator is used to manage and set up cron jobs on the system.
 

@@ -1,6 +1,6 @@
 ---
 title: "Templates Operator"
-weight: 10
+weight: 12
 ---
 The Templates operator is used to create and manage template files on the system. It also allows injecting variables from commands or provided input data.
 
