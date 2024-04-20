@@ -1,6 +1,6 @@
 ---
 title: "Signals Operator"
-weight: 10
+weight: 12
 ---
 The Signals operator is used to send signals to a process, typically to reload configuration files or gracefully stop the process.
 

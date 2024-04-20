@@ -1,6 +1,6 @@
 ---
 title: "Tarball Operator"
-weight: 11
+weight: 13
 ---
 The Tarball operator is used to download and extract a tarball archive to a specified directory.
 
