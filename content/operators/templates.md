@@ -38,7 +38,7 @@ notIf: <sub-command> (Requires version 1.2.6 or higher)
 
 ```yaml
 template: /etc/nginx/nginx.conf
-source: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
+source: https://raw.githubusercontent.com/brucedom/bruce/main/examples/nginx/templates/etc/nginx/nginx.conf
 perms: 0664
 owner: root
 group: root
@@ -55,7 +55,7 @@ In this example, the Templates operator downloads the Nginx configuration file f
 
 ```yaml
 template: /etc/nginx/nginx.conf
-source: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
+source: https://raw.githubusercontent.com/brucedom/bruce/main/examples/nginx/templates/etc/nginx/nginx.conf
 perms: 0664
 owner: root
 group: root
@@ -73,7 +73,7 @@ In the above example, the Templates operator only executes if the /etc/systemd/s
 
 ```yaml
 template: /etc/nginx/nginx.conf
-source: https://raw.githubusercontent.com/configset/cfs/main/examples/nginx/templates/etc/nginx/nginx.conf
+source: https://raw.githubusercontent.com/brucedom/bruce/main/examples/nginx/templates/etc/nginx/nginx.conf
 perms: 0664
 owner: root
 group: root

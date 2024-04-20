@@ -2,7 +2,7 @@
 title: "Variables & Properties"
 weight: 2
 ---
-Variables within configset are effectively environment variables that are read from the current environment but also set in the current running process to ensure that they are available to all operators.  Variables can be set in a number of ways, including: The variables section in the main manifest.  Setting them in the environment prior to running the cfs command.  Setting them in the environment properties file.  Setting them in the command line.  Finally you can also use the set env capabilities of the operators like command to set a value for use.
+Variables within brucedom are effectively environment variables that are read from the current environment but also set in the current running process to ensure that they are available to all operators.  Variables can be set in a number of ways, including: The variables section in the main manifest.  Setting them in the environment prior to running the bruce command.  Setting them in the environment properties file.  Setting them in the command line.  Finally you can also use the set env capabilities of the operators like command to set a value for use.
 
 ## Variable **Order of Precedence**
 Variables are loaded in a very specific order in order to ensure that you can override the values with maximum flexibility.  The order of precedence is as follows:
@@ -12,7 +12,7 @@ Variables are loaded in a very specific order in order to ensure that you can ov
 4. Operators like cmd calling the setEnv capability
 
 ## Pre set environment variables
-These are the environment variables that are pre-set on every machine for the current user that you are running as.  That ensures that you have all the data available for execution.  These variables are also set outside of scope of cfs but are part of the operating environment as set up by the OS and the user.  These variables are available to all operators and templates, as well as all other applications on the OS.
+These are the environment variables that are pre-set on every machine for the current user that you are running as.  That ensures that you have all the data available for execution.  These variables are also set outside of scope of bruce but are part of the operating environment as set up by the OS and the user.  These variables are available to all operators and templates, as well as all other applications on the OS.
 
 ## Variables in manifest being executed
 

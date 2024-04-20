@@ -1,4 +1,4 @@
-baseURL = "https://docs.configset.com/"
+baseURL = "https://docs.brucedom.com/"
 title = "CFS Documentation"
 themesDir = "themes"
 theme = "hugo-theme-learn"
@@ -6,7 +6,7 @@ defaultContentLanguage = "en"
 enableEmoji = true
 
 [params]
-  editURL = "https://github.com/configset/cfs-docs/edit/main/content/"
+  editURL = "https://github.com/bruce/bruce-docs/edit/main/content/"
   themeVariant = "blue"
 
 [[menu.main]]

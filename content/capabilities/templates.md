@@ -2,7 +2,7 @@
 title: "Templates"
 weight: 1
 ---
-The template files use Golang's text/template package, which provides a rich set of functions and actions to perform various operations on the data. In addition to the built-in functions, ConfigSet provides a custom |dump function to pretty-print the variable contents. Here's an overview of some common template functions and actions:
+The template files use Golang's text/template package, which provides a rich set of functions and actions to perform various operations on the data. In addition to the built-in functions, BruceDom provides a custom |dump function to pretty-print the variable contents. Here's an overview of some common template functions and actions:
 
 ## Variables
 You can access environment variables within your template files using the {{.ENV_KEY}} syntax. For example, {{.ENV_HOME}} will be replaced with the value of the ENV_HOME environment variable. If you set an environment variable using an operator, you can access it with a full name like {{.YOUSETME}}. For variables set via an environment properties file, use the current key name without the ENV_ prefix.
