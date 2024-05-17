@@ -1,6 +1,6 @@
 ---
 title: "Services Operator"
-weight: 11
+weight: 12
 ---
 The Services operator is used to manage services on the system, such as enabling, starting, stopping, and restarting them based on triggers.
 
