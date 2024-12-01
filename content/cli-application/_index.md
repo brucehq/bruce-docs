@@ -5,7 +5,7 @@ weight: 1
 ## Overall Usage
 To install the application please see the [installation](/cli-application/install) page.
 
-CFS has many built in operators and actions that can be performed.  The following is a list of the available commands and their usage.  This list can be produced by running the bruce --help command once the application is installed.
+Bruce has many built in operators and actions that can be performed.  The following is a list of the available commands and their usage.  This list can be produced by running the bruce --help command once the application is installed.
 
 ```bash
 bruce --help

@@ -1,5 +1,5 @@
 baseURL = "https://docs.brucedom.com/"
-title = "CFS Documentation"
+title = "Bruce Documentation"
 themesDir = "themes"
 theme = "hugo-theme-learn"
 defaultContentLanguage = "en"

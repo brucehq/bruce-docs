@@ -1,8 +1,8 @@
 ---
-title: "Installing CFS Client Application"
+title: "Installing Bruce Client Application"
 weight: 1
 ---
-## Installing CFS Client Application
+## Installing Bruce Client Application
 To get started with the bruce client application, download the appropriate binary for your platform from the official releases page. Once downloaded, extract the archive.
 
 For Linux or macOS users, you can use the tar command to extract the archive:
