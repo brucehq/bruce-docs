@@ -31,7 +31,7 @@ Above is a simple example of a systemd unit file that is used to start bruce in 
 ### Example configuration for server mode:
 ```yaml
 ---
-endpoint: ws://brucedom.com/workers
+endpoint: wss://brucedom.com/workers
 runner-id: 4e9eaaxb-8v50-418b-9013-cda07820ffc4
 authorization: f9d6258z-0dbc-5gb4-a94d-13x95e5ea2f7
 execution:
