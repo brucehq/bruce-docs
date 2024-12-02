@@ -58,4 +58,4 @@ In the above example the Cron operator will only execute the cron job if the /tm
 
 In the above example the Cron operator will only execute the cron job if the /tmp/output.txt does not exist.
 
-In the next section, we'll discuss the Github operator and how to use it in your manifest files.
+In the next section, we'll discuss the Git operator and how to use it in your manifest files.

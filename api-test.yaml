@@ -7,5 +7,11 @@ steps:
   setEnv: apiResponse
   jsonKey: headers.host
   outputFile: /tmp/apiResponse.json
+- api: https://postman-echo.com/post?test=123
+  method: POST
+  body: "The quick brown fox jumps over the lazy dog!"
+  setEnv: apiResponse
+  jsonKey: data
+  outputFile: /tmp/apiResponse2.json
 - cmd: echo "${apiResponse}"
-- cmd: cat /tmp/apiResponse.json
+

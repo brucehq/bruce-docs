@@ -19,29 +19,38 @@ Group=root
 TimeoutStartSec=10
 Restart=always
 Environment="APP_ENV=dv"
-ExecStart=/usr/local/bin/bruce --config=/some/deploy/path/install.yml server
+ExecStart=/usr/local/bin/bruce server /some/deploy/path/install.yml
 
 [Install]
 WantedBy=multi-user.target
 ```
 
 ## Getting up and running.
-Above is a simple example of a systemd unit file that is used to trigger bruce and initialize it as a server on port 3619.  The ExecStart will run bruce with the specified manifest file (/some/deploy/path/install.yml), if the manifest does not exist it will fail with an error.  At this point bruce will just listen if any curl / wget or other http commands hit the server for instance:
-```bash
-curl http://some-host.somedomain.net:3619
+Above is a simple example of a systemd unit file that is used to start bruce in server mode.  The ExecStart will start bruce and use the /some/deploy/path/install.yml as the config file to run.  During the startup process bruce will run in two primary modes.  Cadence, and Event driven mode.  The two modes can both be used at the same time also.  The cadence mode will run every x minutes by and will execute the manifest file you have provided at said cadence.  The event driven mode will create a websocket connection to the provided bruce server, authenticate and register itself for events at which point it will start listening for events to occur.  When an event occurs it will trigger the manifest file to run assocated with either teh defaault or a specific "action" that you have defined.
+
+### Example configuration for server mode:
+```yaml
+---
+endpoint: ws://local.nitecon.net:8888/workers
+runner-id: 4e9eaeba-8850-418b-9013-cda07820ffc4
+authorization: f9d6258c-04bb-5bb4-a95d-14995e5ea2f7
+execution:
+  - name: run all default
+    action: default # you must have a default action.
+    type: event # can also be cadence
+    cadence: 10 # execution in minutes if cadence is chosen
+    target: test.yaml # should be the path to the manifest to be executed, in this case main branch example config
+  - name: Runs an action event 
+    action: SecondTest #executes the action "SecondTest" which is registered on brucedom.com and tagged to this runner.
+    type: event
+    target: /tmp/test2.yaml 
+  - name: Parse Files in Dir every 5 minutes
+    action: ThirdTest
+    type: cadence
+    cadence: 5
+    target: /tmp/parsefiles.yaml
 ```
-The URL above should reflect your current server you want to trigger. Based on the trigger above bruce will start to execute it's manifest file that exists at the specified path.  This manifest is a standard bruce manifest file so you can have it download a zip file from s3 extract it and run it or whatever your heart desires.
+
+In the above example we have a few different execution types. It will connect to the provided websocket endpoint and authenticate with the provided runner-id and authorization token.  It will then register itself for events and start listening for events to occur.  When an event occurs it will trigger the manifest file to run assocated with either the default or a specific "action" that you have defined.  The first execution type is an event driven execution for the default runner.  Each runner when registered on brucedom.com has it's own execution endpoint which can be triggered. The second execution type is a event driven execution and will trigger the "SecondTest" action which was registered on brucedom.com and tagged with this runner.  The third execution type is a cadence driven execution but it will run the manifest file every 5 minutes.
 
 
-### NOTE:
-* Attempting to trigger bruce to start multiple times will cause you to receive a 429 response from the server.  It will only allow a single run to occur at a time, once the run is complete it will allow you to start again.  You may also use this indirectly to check if a run is still in progress should you need to.
-
-## Server Command options
-
-* `--config` <config file path> that the server will run every time a trigger happens
-* `--server-port OR -P` the port that the server will listen on (default 3619)
-
-
-## Possible future additions
-
-Running the server operator as a cluster operator to allow for single node deployments behind a load balancer, in the event of a failure it would "taint" that node and all following triggers would then only occur on the failed node to ensure you can achieve a correct state before it will allow the follow up triggers to run on additional nodes.  If this is something you are interested in feel free to submit an issue as a feature request for this.
