@@ -17,7 +17,6 @@ Please make sure to not set the incremental variable inside the target script as
 - loopScript: <script to run>
   count: <number of times>
   var: <var to set>
-  osLimits: <os to limit>
   onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
   notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
@@ -25,7 +24,6 @@ Please make sure to not set the incremental variable inside the target script as
 * `loopScript`: The script to run multiple times.
 * `count`: The number of times to run the script.
 * `var`: The variable to set and update.
-* `osLimits`: A list of operating systems that the operator should run on.
 * `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
 * `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
 

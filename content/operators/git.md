@@ -9,14 +9,12 @@ The Git operator provides a means to clone a Git repository to a specific locati
 ```yaml
 - gitRepo: <repository url>
   dest: <destination>
-  osLimits: <os limits>
   onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
   notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
 `repository url`: The URL of the Git repository to clone.
 `destination`: The local file path where the repository will be cloned to.
-`osLimits`: (Optional) A list of operating systems that the Git repository is allowed to operate on.  If this is not specified, the repository will be cloned to all operating systems.
 `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
 `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
 
@@ -25,7 +23,6 @@ The Git operator provides a means to clone a Git repository to a specific locati
 ```yaml
 - gitRepo: https://github.com/mallorbc/Finetune_LLMs.git
   dest: ~/ai
-  osLimits: ubuntu
 ```
 
 In this example, the Git operator clones the repository for Fine Tuning LLM to the User's home directory into an aidirectory on Ubuntu systems.
@@ -35,7 +32,6 @@ In this example, the Git operator clones the repository for Fine Tuning LLM to t
 ```yaml
 - gitRepo: https://github.com/mallorbc/Finetune_LLMs.git
   dest: ~/ai
-  osLimits: ubuntu
   onlyIf: which python
 ```
 
@@ -46,7 +42,6 @@ In this example, the Git operator clones the repository for Fine Tuning LLM to t
 ```yaml
 - gitRepo: https://github.com/mallorbc/Finetune_LLMs.git
   dest: ~/ai
-  osLimits: ubuntu
   notIf: which python3.11
 ```
 

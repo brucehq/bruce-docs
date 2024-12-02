@@ -16,7 +16,6 @@ vars:
   - type: <TYPE>
     input: <INPUT>
     variable: <VARIABLE>
-osLimits: <OS_LIMITS>
 onlyIf: <sub-command> (Requires version 1.2.6 or higher)
 notIf: <sub-command> (Requires version 1.2.6 or higher)
 ```
@@ -30,7 +29,6 @@ notIf: <sub-command> (Requires version 1.2.6 or higher)
 * `type`: The type of variable source (e.g., value).
 * `input`: The input value or expression to evaluate.
 * `variable`: The variable name to use in the template.
-* `osLimits`: A list of operating systems that the operator should run on.
 * `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
 * `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
 
@@ -46,7 +44,6 @@ vars:
   - type: value
     input: nginx|apt=www-data
     variable: NGINX_USER
-osLimits: all
 ```
 
 In this example, the Templates operator downloads the Nginx configuration file from the provided URL and saves it to /etc/nginx/nginx.conf with the specified permissions, owner, and group. It also injects the variable NGINX_USER with the value nginx or www-data, depending on the operating system.
@@ -63,7 +60,6 @@ vars:
   - type: value
     input: nginx|apt=www-data
     variable: NGINX_USER
-osLimits: all
 notIf: ls /etc/systemd/system/nginx.service
 ```
 
@@ -81,7 +77,6 @@ vars:
   - type: value
     input: nginx|apt=www-data
     variable: NGINX_USER
-osLimits: all
 onlyIf: ls /tmp/output.txt
 ```
 

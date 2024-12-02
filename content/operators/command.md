@@ -9,7 +9,6 @@ The Command operator is used to execute a command on the system.
 ```yaml
 cmd: <command>
 dir: <workingdir>
-osLimits: <oslimits>
 setEnv: <setenv>
 onlyIf: <sub-command> (Requires version 1.2.6 or higher)
 notIf: <sub-command> (Requires version 1.2.6 or higher)
@@ -17,7 +16,6 @@ notIf: <sub-command> (Requires version 1.2.6 or higher)
 
 * `cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
 * `dir`: The working directory for the command. If not specified, the working directory will be the same as the directory where the manifest file is located.
-* `osLimits`: The operating system limits to apply to the command. See the [Operating System Limits](/03-capabilities/02-os-limits/) page for more information.
 * `setEnv`: This sub command takes the output of the command and sets it to the provided environment variable.
 * `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
 * `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
