@@ -1,6 +1,6 @@
 ---
 title: "Recursive Copy Operator"
-weight: 9
+weight: 10
 ---
 The Recursive Copy operator is used similarly to the copy operator but is intended to copy files recursively from a target location to location on the local machine.  The current supported source schemes (copyRecursive) include http and https as well as S3, please note that you must have your AWS environment already configured as the bruce application will make use of your environment keys / roles to make the copies should you decide to use S3.
 

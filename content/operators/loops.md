@@ -1,6 +1,6 @@
 ---
 title: "Loop Operator"
-weight: 6
+weight: 7
 ---
 The loop operator is used in order to execute an install script multiple times, it does so, and in process also sets and updates a variable with a count.
 

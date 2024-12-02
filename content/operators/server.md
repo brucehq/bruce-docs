@@ -1,6 +1,6 @@
 ---
 title: "Server Operator"
-weight: 11
+weight: 12
 ---
 The server operator allows you to run bruce as a server on a remote server.  The purpose of this is to allow you to easily trigger a new continuous deployment without having to access the system remotely through ssh etc.  There is a catch however, you cannot just run arbitrary commands via the listening port.  The server operator will listen by default on port 3619 as an http server.  It will accept GET / POST / PUT commands and will execute the config file you specify during the run.
 

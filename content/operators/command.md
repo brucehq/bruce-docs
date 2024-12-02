@@ -1,6 +1,6 @@
 ---
 title: "Command Operator"
-weight: 1
+weight: 2
 ---
 The Command operator is used to execute a command on the system.
 

@@ -1,0 +1,11 @@
+---
+variables:
+  Person: "Steven"
+  # note do not set Option here as it will be overwritten
+steps:
+- api: https://postman-echo.com/get?foo1=bar1&foo2=bar2
+  setEnv: apiResponse
+  jsonKey: headers.host
+  outputFile: /tmp/apiResponse.json
+- cmd: echo "${apiResponse}"
+- cmd: cat /tmp/apiResponse.json

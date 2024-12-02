@@ -1,6 +1,6 @@
 ---
 title: "Copy Operator"
-weight: 2
+weight: 3
 ---
 The Copy operator is used to create a copy of a file or directory on the system.
 

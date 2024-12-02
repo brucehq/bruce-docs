@@ -1,6 +1,6 @@
 ---
 title: "Remote Command Operator"
-weight: 10
+weight: 11
 ---
 The remote command operator allows you to run commands over an ssh encrypted tunnel as if it was on your local machine.  The intent is to allow for SSH remote execution of commands natively in both linux / mac and windows environments.
 
