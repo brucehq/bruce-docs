@@ -28,7 +28,14 @@ steps:
   - nginx
   - logrotate
 ```
-This is the most common way to establish variables for the operators to make use of.  The service owner, and remote days as well as the vhost document root are set and can now be used by the operators and templates.  Operators use standard shell notation eg. `$ServiceOwner` or `${ServiceOwner}` to reference the variable.  Templates use the golang text/template notation eg. `{{.ServiceOwner}}` to reference the variable.
+This is the most common way to establish variables for the operators to make use of.  The service owner, and remote days as well as the vhost document root are set and can now be used by the operators and templates.  Operators use template variable notation eg. `{{.ServiceOwner}}` to reference the variable.  Templates use the golang text/template notation eg. `{{.ServiceOwner}}` to reference the variable.
+
+Both operators and templates can make use the full range of golang text/template functions and operators to manipulate the variables as needed.  For example you can use the `printf` function to format the variable as needed.  For example you can use the following to format the RotateDays variable as a string with a leading zero if it is less than 10.
+
+```yaml
+- cmd: echo {{printf "%02d" .RotateDays}}
+  setEnv: RotateDays
+```
 
 ## Properties file specified from `-p` or `--property-file` flag
 The properties file is a file that contains a list of key value pairs that are loaded into the environment prior to execution.  This allows you to pre-set a set of variables that can be used by the operators and templates.  This is a great way to set up a set of variables that can be used across multiple executions.  For example you can set up a properties file that contains the following:

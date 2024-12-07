@@ -13,5 +13,5 @@ steps:
   setEnv: apiResponse
   jsonKey: data
   outputFile: /tmp/apiResponse2.json
-- cmd: echo "${apiResponse}"
+- cmd: echo "{{.apiResponse}}"
 

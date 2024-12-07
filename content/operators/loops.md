@@ -48,7 +48,7 @@ variables:
   # note do not set Option here as it will be overwritten
   NODE_ID: 0
 steps:
-- cmd: echo "Hello World = ${NODE_ID}" >> output.txt
+- cmd: echo "Hello World = {{.NODE_ID}}" >> output.txt
 ```
 
 And  then using a loop script like this:

@@ -6,7 +6,7 @@ This section explains the extended capabilities of operators that are available 
 
 Example:
 ```yaml
-- copy: s3://somebucket/somefile.${SOMEKEY}.bin
+- copy: s3://somebucket/somefile.{{.SOMEKEY}}.bin
   dest: /usr/bin/somefile
   perm: 0775
 ```
