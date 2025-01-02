@@ -2,7 +2,7 @@
 title: "Server Operator"
 weight: 12
 ---
-The server operator allows you to run bruce as a server on a remote server.  The purpose of this is to allow you to easily trigger a new continuous deployment without having to access the system remotely through ssh etc.  There is a catch however, you cannot just run arbitrary commands via the listening port.  The server operator will listen by default on port 3619 as an http server.  It will accept GET / POST / PUT commands and will execute the config file you specify during the run.
+The server operator allows you to run bruce as a server on a remote server.  The purpose of this is to allow you to easily trigger a new continuous deployment without having to access the system remotely through ssh etc.  There is a catch however, you cannot just run arbitrary commands via the listening port.  The server operator can run in both connected and disconnected modes.  When connecting the service to a bruce backend like https://bruce.tools it will create a secure websocket connection and receive events and actions that will trigger additional invocations.  In standalone mode it can be set up to run specific manivest files on a cadence.
 
 Lets take a look at how you may set this up.
 
