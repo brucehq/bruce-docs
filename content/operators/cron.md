@@ -15,12 +15,13 @@ The Cron operator is used to manage and set up cron jobs on the system.
   notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
-`name`: The name of the cron job.
-`schedule`: The schedule of the cron job.
-`username`: The user to run the cron job as.
-`cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
-`onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
-`notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
+* `name`: The name of the cron job.
+* `schedule`: The schedule of the cron job.
+* `username`: The user to run the cron job as.
+* `cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
+* `onlyIf`: [See detailed docs here](sub-commands)
+* `notIf`: [See detailed docs here](sub-commands)
+* `exitIf`: [See detailed docs here](sub-commands)
 
 ## Example:
 

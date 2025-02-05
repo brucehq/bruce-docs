@@ -17,8 +17,9 @@ The Copy operator is used to create a copy of a file or directory on the system.
 * `copy`: The item to be copied at the source location.
 * `dest`: The destination path where the file or directory should be copied.
 * `perm`: The permissions to use in octal values for the copied file or directory.
-* `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
-* `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
+* `onlyIf`: [See detailed docs here](sub-commands)
+* `notIf`: [See detailed docs here](sub-commands)
+* `exitIf`: [See detailed docs here](sub-commands)
 
 ## Example 1:
 ```yaml

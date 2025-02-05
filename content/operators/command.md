@@ -17,9 +17,10 @@ notIf: <sub-command> (Requires version 1.2.6 or higher)
 * `cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
 * `dir`: The working directory for the command. If not specified, the working directory will be the same as the directory where the manifest file is located.
 * `setEnv`: This sub command takes the output of the command and sets it to the provided environment variable.
-* `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
-* `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
-
+* `onlyIf`: [See detailed docs here](sub-commands)
+* `notIf`: [See detailed docs here](sub-commands)
+* `exitIf`: [See detailed docs here](sub-commands)
+* 
 ## Examples
 ### Example 1
 ```yaml

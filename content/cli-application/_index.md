@@ -61,8 +61,18 @@ All new functionality will be added to the help command as it is added to the br
 # Global Options
 The following commands provide the options that make each of the operators function.  While these are global options not all operators support the global options, for instance providing a properties file while doing a bruce search will net you no installation results and will just follow the functionality of the operator itself, which is to search for manifests.
 
-## Config
-The config file is a yaml manifest that contains the variables as well as the steps responsible for setting up or deploying applicaitons. For standard functionality the config file, you can pass the config file without the need of the parameter name.  For example:
+## Operating modes
+Bruce currently has 2 operating modes, execution and server mode.
+
+In server mode Bruce runs as a server that allows it to receive dynamic events and kick off additional manifests based on the type of event received.
+
+It can also run in cadence mode as part of the server operating mode which allows it to execute manifests on a specific cadence every so many minutes.
+
+With execution mode it uses a manifest file to execute a list of steps as seen below.
+The config file is a yaml manifest that contains the variables as well as the steps responsible for setting up or deploying applicaitons. For standard functionality 
+the config file, 
+you can pass the config file without the need of the parameter 
+name.  For example:
 
 ```bash
 bruce /path/to/install-manifest.yml

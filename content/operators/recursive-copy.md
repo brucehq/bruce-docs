@@ -23,8 +23,9 @@ The Recursive Copy operator is used similarly to the copy operator but is intend
 * `flatCopy`: This is a boolean value that determines if the files should be copied to the destination directory or if the directory structure should be preserved.
 * `maxDepth`: This is an integer value that determines the maximum depth of the directory structure that should be copied. If set to 0 or left unset it will copy the entire directory structure.
 * `maxConcurrent`: This is an integer value that determines the maximum number of concurrent file copies that should be performed.  If set to 0 or left unset it will use the default value of 5.
-* `onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
-* `notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
+* `onlyIf`: [See detailed docs here](sub-commands)
+* `notIf`: [See detailed docs here](sub-commands)
+* `exitIf`: [See detailed docs here](sub-commands)
 
 Please do be careful with setting the maxConcurrency value too high as you may run into issues with the remote server throttling your requests.
 

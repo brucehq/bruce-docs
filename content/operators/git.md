@@ -13,13 +13,14 @@ The Git operator provides a means to clone a Git repository to a specific locati
   notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
-`repository url`: The URL of the Git repository to clone.
-`destination`: The local file path where the repository will be cloned to.
-`onlyIf`: This sub command will run and if an output is received it will return true and thus allow execution
-`notIf`: This sub command will run and if an output is received it will return false and thus prevent execution
-`mode`: Can be one of the following: `cloneOnly, pull, reclone
-`branch`: The branch to checkout after cloning the repository
-`tag`: The tag to checkout after cloning the repository
+* `repository url`: The URL of the Git repository to clone.
+* `destination`: The local file path where the repository will be cloned to.
+* `mode`: Can be one of the following: `cloneOnly, pull, reclone
+* `branch`: The branch to checkout after cloning the repository
+* `tag`: The tag to checkout after cloning the repository
+* `onlyIf`: [See detailed docs here](sub-commands)
+* `notIf`: [See detailed docs here](sub-commands)
+* `exitIf`: [See detailed docs here](sub-commands)
 
 ### Mode options:
 For the mode options please note that the following behavior will be added to the git clone operation once set:
