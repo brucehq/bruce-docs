@@ -18,9 +18,9 @@ The Tarball operator is used to download and extract a tarball archive to a spec
 * `dest`: The directory where the tarball should be extracted.
 * `force`: A boolean value that determines if the destination directory should be overwritten if it already exists.
 * `stripRoot`: A boolean value that determines if the first directory from every path should be stripped.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ## Example 1:
 

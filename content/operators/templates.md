@@ -29,9 +29,9 @@ notIf: <sub-command> (Requires version 1.2.6 or higher)
 * `type`: The type of variable source (e.g., value).
 * `input`: The input value or expression to evaluate.
 * `variable`: The variable name to use in the template.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ## Example:
 

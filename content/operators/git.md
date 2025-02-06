@@ -18,9 +18,9 @@ The Git operator provides a means to clone a Git repository to a specific locati
 * `mode`: Can be one of the following: `cloneOnly, pull, reclone
 * `branch`: The branch to checkout after cloning the repository
 * `tag`: The tag to checkout after cloning the repository
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ### Mode options:
 For the mode options please note that the following behavior will be added to the git clone operation once set:

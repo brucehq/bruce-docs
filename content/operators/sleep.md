@@ -14,6 +14,6 @@ the behaviour.  For instance if you only want to sleep when a new server is bein
   exitIf: <sub-command> #(Requires version 1.5.0 or higher)
 ```
 * `sleep`: The amount of time to sleep in seconds
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)

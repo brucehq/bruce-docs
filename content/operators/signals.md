@@ -15,9 +15,9 @@ notIf: <sub-command> #(Requires version 1.2.6 or higher)
 
 * `pidFile`: The path to the process ID (PID) file for the process you want to send a signal to.
 * `signal`: The signal to send to the process. Currently supports: SIGHUP, SIGINT.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ## Example:
 

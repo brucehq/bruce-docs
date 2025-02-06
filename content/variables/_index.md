@@ -24,9 +24,7 @@ variables:
   RotateDays: 7
   VHOST_ROOT: /opt/vhosts/hello-world
 steps:
-- packageList:
-  - nginx
-  - logrotate
+- cmd: apt install -y nginx logrotate
 ```
 This is the most common way to establish variables for the operators to make use of.  The service owner, and remote days as well as the vhost document root are set and can now be used by the operators and templates.  Operators use template variable notation eg. `{{.ServiceOwner}}` to reference the variable.  Templates use the golang text/template notation eg. `{{.ServiceOwner}}` to reference the variable.
 

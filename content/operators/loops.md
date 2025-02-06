@@ -24,9 +24,9 @@ Please make sure to not set the incremental variable inside the target script as
 * `loopScript`: The script to run multiple times.
 * `count`: The number of times to run the script.
 * `var`: The variable to set and update.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ## Example 1:
 

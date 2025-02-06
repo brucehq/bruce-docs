@@ -10,7 +10,7 @@ As mentioned before Bruce currently runs in one of 2 operating modes.  The defau
 Majority of the documentation here is centralized on execution mode as that is what is at the heart of bruce.  Execution mode makes use of a manifest file to execute a list of steps to configure / build / deploy or run a set of run books in a 
 reproducible manner on the respective machine you are on.  As seen in the getting started guide and the previous CLI application start guide. A manifest consists of variables and steps of operators which will execute in order as a sequence.
 
-Since the vast majoirty of the documentation already focuses on this behaviour, within this section we will concentrate on the secondary execution mode.
+Since the vast majority of the documentation already focuses on this behaviour, within this section we will concentrate on the secondary execution mode.
 
 ## Server Mode.
 

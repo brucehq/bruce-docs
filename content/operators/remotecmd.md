@@ -16,9 +16,9 @@ The remote command operator allows you to run commands over an ssh encrypted tun
 
 * `remoteCmd`: The command to be executed on the remote server.
 * `host`: The host to connect to in order to execute the command.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 Example connecting to the remote server with the current user name (useful in linux if your ssh key is already set up)
 

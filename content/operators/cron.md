@@ -19,9 +19,9 @@ The Cron operator is used to manage and set up cron jobs on the system.
 * `schedule`: The schedule of the cron job.
 * `username`: The user to run the cron job as.
 * `cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ## Example:
 

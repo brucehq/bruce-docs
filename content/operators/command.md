@@ -17,9 +17,9 @@ notIf: <sub-command> (Requires version 1.2.6 or higher)
 * `cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
 * `dir`: The working directory for the command. If not specified, the working directory will be the same as the directory where the manifest file is located.
 * `setEnv`: This sub command takes the output of the command and sets it to the provided environment variable.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 * 
 ## Examples
 ### Example 1

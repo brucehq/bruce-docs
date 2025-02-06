@@ -19,9 +19,9 @@ The Command operator is used to execute a command on the system.
 * `headers`: Array of strings representing headers to be added as key value parirs, keys and values are separated by `:`, Ex: `BasicAuth: foo`
 * `jsonKey`: Uses dot notation on the response json object to retrieve a specific value.
 * `setEnv`: This works in conjunction with jsonKey and will set the output of the jsonKey to the environment variable.
-* `onlyIf`: [See detailed docs here](sub-commands)
-* `notIf`: [See detailed docs here](sub-commands)
-* `exitIf`: [See detailed docs here](sub-commands)
+* `onlyIf`: [See detailed docs here](/operators/sub-commands)
+* `notIf`: [See detailed docs here](/operators/sub-commands)
+* `exitIf`: [See detailed docs here](/operators/sub-commands)
 
 ## Examples
 ### Example 1
