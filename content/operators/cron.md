@@ -11,8 +11,6 @@ The Cron operator is used to manage and set up cron jobs on the system.
   schedule: <SCHEDULE>
   username: <USER>
   cmd: <COMMAND>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
 * `name`: The name of the cron job.

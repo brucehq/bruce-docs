@@ -9,12 +9,10 @@ The Git operator provides a means to clone a Git repository to a specific locati
 ```yaml
 - gitRepo: <repository url>
   dest: <destination>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
-* `repository url`: The URL of the Git repository to clone.
-* `destination`: The local file path where the repository will be cloned to.
+* `gitRepo`: The URL of the Git repository to clone.
+* `dest`: The local path where the repository will be cloned to.
 * `mode`: Can be one of the following: `cloneOnly, pull, reclone
 * `branch`: The branch to checkout after cloning the repository
 * `tag`: The tag to checkout after cloning the repository

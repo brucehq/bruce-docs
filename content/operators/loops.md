@@ -17,8 +17,6 @@ Please make sure to not set the incremental variable inside the target script as
 - loopScript: <script to run>
   count: <number of times>
   var: <var to set>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
 * `loopScript`: The script to run multiple times.

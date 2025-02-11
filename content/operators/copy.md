@@ -9,13 +9,11 @@ The Copy operator is used to create a copy of a file or directory on the system.
 ```yaml
 - copy: <SOURCE>
   dest: <DESTINATION>
-  perm: <PERMISSION>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
 * `copy`: The item to be copied at the source location.
 * `dest`: The destination path where the file or directory should be copied.
+* `key`: If doing a remote copy, the key to use for the remote location (scp).
 * `perm`: The permissions to use in octal values for the copied file or directory.
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)
 * `notIf`: [See detailed docs here](/operators/sub-commands)

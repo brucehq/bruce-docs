@@ -9,15 +9,13 @@ The Tarball operator is used to download and extract a tarball archive to a spec
 ```yaml
 - tarball: <TARBALL>
   dest: <DESTINATION>
-  force: <FORCE>
-  stripRoot: <STRIPROOT>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
+  force: True|False
+  stripRoot: True|False
 ```
 * `tarball`: The location of the tarball archive to be downloaded.
 * `dest`: The directory where the tarball should be extracted.
 * `force`: A boolean value that determines if the destination directory should be overwritten if it already exists.
-* `stripRoot`: A boolean value that determines if the first directory from every path should be stripped.
+* `stripRoot`: A boolean value that determines if only the files inside the the first directory should be extracted.
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)
 * `notIf`: [See detailed docs here](/operators/sub-commands)
 * `exitIf`: [See detailed docs here](/operators/sub-commands)

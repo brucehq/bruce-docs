@@ -9,9 +9,6 @@ the behaviour.  For instance if you only want to sleep when a new server is bein
 
 ```yaml
 - sleep: <seconds>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
-  exitIf: <sub-command> #(Requires version 1.5.0 or higher)
 ```
 * `sleep`: The amount of time to sleep in seconds
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)

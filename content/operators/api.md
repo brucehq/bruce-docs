@@ -17,8 +17,9 @@ The Command operator is used to execute a command on the system.
 * `method`: Supports the standard http methods for instance GET/PUT/POST/DELETE
 * `body`: Body that will be added to the request.
 * `headers`: Array of strings representing headers to be added as key value parirs, keys and values are separated by `:`, Ex: `BasicAuth: foo`
+* `setBodyEnv`: This will set the body of the response to the environment variable.
+* `setEnv`: This works in conjunction with jsonKey and will set the output of the jsonKey to this environment variable.
 * `jsonKey`: Uses dot notation on the response json object to retrieve a specific value.
-* `setEnv`: This works in conjunction with jsonKey and will set the output of the jsonKey to the environment variable.
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)
 * `notIf`: [See detailed docs here](/operators/sub-commands)
 * `exitIf`: [See detailed docs here](/operators/sub-commands)

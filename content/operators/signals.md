@@ -9,8 +9,6 @@ The Signals operator is used to send signals to a process, typically to reload c
 ```yaml
 pidFile: <PID_FILE>
 signal: <SIGNAL>
-onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
 * `pidFile`: The path to the process ID (PID) file for the process you want to send a signal to.

@@ -4,6 +4,9 @@ weight: 10
 ---
 The Recursive Copy operator is used similarly to the copy operator but is intended to copy files recursively from a target location to location on the local machine.  The current supported source schemes (copyRecursive) include http and https as well as S3, please note that you must have your AWS environment already configured as the bruce application will make use of your environment keys / roles to make the copies should you decide to use S3.
 
+### Note:
+Recursive copies for http and https only support web servers that provide proper directory listings.  If the web server does not provide directory listings the copy will fail.
+
 ## Syntax
 
 ```yaml
@@ -13,11 +16,9 @@ The Recursive Copy operator is used similarly to the copy operator but is intend
   flatCopy: <IGNORED_FILES>
   maxDepth: <IGNORED_FILES>
   maxConcurrent: <MAX_CONCURRENT>
-  onlyIf: <sub-command> #(Requires version 1.2.6 or higher)
-  notIf: <sub-command> #(Requires version 1.2.6 or higher)
 ```
 
-* `copy`: The source directory/file to be copied.  Must currently be an http / https url.
+* `copyRecursive`: The source directory/file to be copied.  Must currently be an http / https url.
 * `dest`: The destination path where the file or directory should be copied to.
 * `ignoreFiles`: This is a list of files that should not be copied from the source location.
 * `flatCopy`: This is a boolean value that determines if the files should be copied to the destination directory or if the directory structure should be preserved.

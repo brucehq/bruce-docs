@@ -16,6 +16,9 @@ The remote command operator allows you to run commands over an ssh encrypted tun
 
 * `remoteCmd`: The command to be executed on the remote server.
 * `host`: The host to connect to in order to execute the command.
+* `setEnv`: This will set the output of the remote command to the local environment variable.
+* `key`: The key to use for the remote connection (ssh key). uses the default key if not specified.
+* `allowInsecure`: Boolean flag to indicate whether to allow insecure connections, where the host is unknown.
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)
 * `notIf`: [See detailed docs here](/operators/sub-commands)
 * `exitIf`: [See detailed docs here](/operators/sub-commands)
