@@ -10,17 +10,17 @@ The Command operator is used to execute a command on the system.
 - cmd: <command>
   dir: <workingdir>
   setEnv: <setenv>
-  onlyIf: <sub-command> (Requires version 1.2.6 or higher)
-  notIf: <sub-command> (Requires version 1.2.6 or higher)
+  onlyIf: <sub-command>
+  notIf: <sub-command>
+  exitIf: <sub-command>
 ```
-
-* `cmd`: The command to execute, the arguments to pass to the command, and any other options that should be used.
-* `dir`: The working directory for the command. If not specified, the working directory will be the same as the directory where the manifest file is located.
+* `cmd`: The command to execute. Supports templating with environment variables via `RenderEnvString`, so `{{.VAR}}` Expansions are resolved before execution.
+* `dir`: Working directory. Supports templating. If not specified, the process' current working directory is used.
 * `setEnv`: This sub command takes the output of the command and sets it to the provided environment variable.
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)
 * `notIf`: [See detailed docs here](/operators/sub-commands)
 * `exitIf`: [See detailed docs here](/operators/sub-commands)
-* 
+
 ## Examples
 ### Example 1
 ```yaml
@@ -51,5 +51,13 @@ In the above example the Command operator will only execute the ls command if th
   notIf: /usr/bin/ls /tmp/somefile.txt
 ```
 In the above example the Command operator will only execute the ls command if the /tmp/somefile.txt does not exist.
+
+### Example 5
+
+```yaml
+- cmd: echo "Will not run if this file exists"
+  exitIf: test -f /etc/machine-id && echo exists
+```
+If the `exitIf` sub-command returns any output (and a zero exit status), Bruce exits early without running further steps.
 
 In the next section, we'll discuss the Copy operator and how to use it in your manifest files.

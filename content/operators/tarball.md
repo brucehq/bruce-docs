@@ -1,8 +1,10 @@
 ---
 title: "Tarball Operator"
-weight: 15
+weight: 11
 ---
 The Tarball operator is used to download and extract a tarball archive to a specified directory.
+
+Templating: `tarball` (source), `dest`, and conditionals support environment templating via `RenderEnvString()`.
 
 ## Syntax
 

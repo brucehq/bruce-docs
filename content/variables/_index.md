@@ -12,13 +12,13 @@ Variables are loaded in a very specific order in order to ensure that you can ov
 4. Operators like cmd calling the setEnv capability
 
 ## Pre set environment variables
+
 These are the environment variables that are pre-set on every machine for the current user that you are running as.  That ensures that you have all the data available for execution.  These variables are also set outside of scope of bruce but are part of the operating environment as set up by the OS and the user.  These variables are available to all operators and templates, as well as all other applications on the OS.
 
 ## Variables in manifest being executed
 
 The main manifest file may look something like this:
 ```yaml
----
 variables:
   ServiceOwner: www-data
   RotateDays: 7
@@ -36,14 +36,15 @@ Both operators and templates can make use the full range of golang text/template
 ```
 
 ## Properties file specified from `-p` or `--property-file` flag
+
 The properties file is a file that contains a list of key value pairs that are loaded into the environment prior to execution.  This allows you to pre-set a set of variables that can be used by the operators and templates.  This is a great way to set up a set of variables that can be used across multiple executions.  For example you can set up a properties file that contains the following:
 ```yaml
 ServiceOwner=www-data
 RotateDays=7
 VHOST_ROOT=/opt/vhosts/hello-world
-``` 
-
+```
 ### Properties file for different environments
+
 Second to this a standard pattern is to create different properties files for different environments.  For example you can create a properties file for your dev environment, one for your staging environment and one for your production environment.  This allows you to have a single manifest file that can be used across all environments but the properties file will be different for each environment.  For example you can have a properties file for your dev environment that contains the following:
 ```yaml
 AppEnv=dev
@@ -61,10 +62,3 @@ The command operator provides a means to take the current output of the command 
 ```yaml
 - cmd: ip addr show $(ip route | awk '/default/ {print $5}') | awk '/inet / {print $2}' | awk -F/ '{print $1}'
   setEnv: Domain
-```
-### Secrets for your templates
-You can also use the command operator to retrieve a secret from a secret store like HashiCorp Vault and then use it in a template.  This allows you to retrieve a secret and then use it in a template without having to worry about the secret being exposed in the manifest file.  For example you can use the following command to retrieve a secret from HashiCorp Vault and then use it in a template to set the password for a database user.
-```yaml
-- cmd: vault kv get -field=password secret/database
-  setEnv: DB_PASSWORD
-```

@@ -1,13 +1,8 @@
 ---
 title: "Signals Operator"
-weight: 14
+weight: 10
 ---
-The Signals operator is used to send signals to a process, typically to reload configuration files or gracefully stop the process.
 
-## Syntax
-
-```yaml
-pidFile: <PID_FILE>
 signal: <SIGNAL>
 ```
 

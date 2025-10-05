@@ -4,6 +4,8 @@ weight: 3
 ---
 The Copy operator is used to create a copy of a file or directory on the system.
 
+All string fields (`copy`, `dest`, and conditionals) support environment templating via `RenderEnvString()`, so values like `s3://bucket/{{.APP_ENV}}/artifact.tgz` are rendered using current environment variables.
+
 ## Syntax
 
 ```yaml
@@ -13,11 +15,17 @@ The Copy operator is used to create a copy of a file or directory on the system.
 
 * `copy`: The item to be copied at the source location.
 * `dest`: The destination path where the file or directory should be copied.
-* `key`: If doing a remote copy, the key to use for the remote location (scp).
+* `key`: Optional key/credential used by the loader for remote sources (e.g., S3 or authenticated endpoints).
 * `perm`: The permissions to use in octal values for the copied file or directory.
 * `onlyIf`: [See detailed docs here](/operators/sub-commands)
 * `notIf`: [See detailed docs here](/operators/sub-commands)
 * `exitIf`: [See detailed docs here](/operators/sub-commands)
+
+Supported sources include:
+
+- `s3://bucket/key`
+- `http(s)://...`
+- Local paths (`/path`, `./relative`)
 
 ## Example 1:
 ```yaml
