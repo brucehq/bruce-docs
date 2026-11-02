@@ -1,4 +1,4 @@
----
+                                              ---
 title: "Installing Bruce Client Application"
 weight: 1
 ---
